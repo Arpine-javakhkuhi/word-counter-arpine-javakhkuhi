@@ -10,18 +10,27 @@
     <div class="main">
       <div class="container">
         <label for="text">Enter your text:</label>
-        <textarea id="text" name="text" rows="10" cols="50"></textarea>
+        <textarea id="text" name="text" rows="10" cols="40" min></textarea>
+
         <p id="error">Text field cannot be empty!</p>
-        <button id="submit-btn">Submit</button>
+
+        <button class="btn" id="submit-btn">Submit</button>
 
         <div class="result">
-          <h3>Number of letters: <span id="letters_num"></span></h3>
-          <h3>Number of words: <span id="words_num"></span></h3>
-          <h3>Number of sentences: <span id="sentences_num"></span></h3>
+          <p class="result_text">
+            Number of letters: <span id="letters_num"></span>
+          </p>
+          <p class="result_text">
+            Number of words: <span id="words_num"></span>
+          </p>
+          <p class="result_text">
+            Number of sentences: <span id="sentences_num"></span>
+          </p>
         </div>
       </div>
       <div>
-        Click to change background: <button id="change-color">Change</button>
+        Click to change background:
+        <button class="btn" id="change-color">Change</button>
       </div>
     </div>
 

@@ -1,11 +1,12 @@
-document.getElementById("submit-btn").addEventListener("click", calculation);
+document.getElementById("submit-btn")?.addEventListener("click", calculation);
 
 document
   .getElementById("change-color")
-  .addEventListener("click", changeBgColor);
+  ?.addEventListener("click", changeBgColor);
 
 async function calculation() {
   const text = document.getElementById("text").value.trim();
+
   if (!text) {
     const error_txt = document.getElementById("error");
     error_txt.style.display = "block";
@@ -15,7 +16,8 @@ async function calculation() {
 
     return;
   }
-  const wordsNum = await countWords(text.trim());
+
+  const wordsNum = await countWords(text);
 
   const lettersNum = await countLetters(text);
 
@@ -29,6 +31,7 @@ async function countLetters(text) {
   for (let i = 0; i < text.length; i++) {
     const upperCaseCharCode = text[i].toUpperCase().charCodeAt(0);
 
+    // 64 is code for A, 91 is code for Z
     if (upperCaseCharCode > 64 && upperCaseCharCode < 91) {
       let_length++;
     }
@@ -58,8 +61,6 @@ function showResult(words, letters, sentences) {
 
 function changeBgColor() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  console.log("randomColor", randomColor);
   const mainContainer = document.querySelector(".main");
-  console.log("mainContainer", mainContainer);
   mainContainer.style.backgroundColor = `#${randomColor}`;
 }
