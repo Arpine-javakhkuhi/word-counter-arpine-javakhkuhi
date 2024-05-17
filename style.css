@@ -1,0 +1,31 @@
+* {
+  margin: 10px auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: lightslategray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: 25rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: honeydew;
+}
+
+#submit-btn {
+  width: 80px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+#error {
+  color: red;
+  display: none;
+}
